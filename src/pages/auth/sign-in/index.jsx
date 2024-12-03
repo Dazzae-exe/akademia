@@ -64,9 +64,8 @@ export const SignIn = () => {
     },
   });
 
-  const onSubmit = async (values) => {
-    await userSignIn(values.email, values.password);
-    console.log(values)
+  const onSubmit = (values) => {
+    userSignIn(values.email, values.password);
   };
 
   return (

@@ -4,19 +4,19 @@ import {
   Route,
   RouterProvider,
 } from "react-router-dom";
-import HomePage from "./pages/homepage";
-import { RootLayout } from "./layout/root-layout";
-import { Landing } from "./pages/landing";
-import { AboutUs } from "./pages/about";
-import { SignUp } from "./pages/auth/sign-up";
-import { SignIn } from "./pages/auth/sign-in";
-import { Error404 } from "./pages/error";
-import { Pricing } from "./pages/pricing";
-import { Checkout } from "./pages/checkout";
-import { PurchaseComplete } from "./pages/checkout/purcharse-complete";
-import { CourseConference } from "./pages/course";
-import { FAQPage } from "./pages/faq";
-import { CourseProvider } from "./context";
+import HomePage from "../pages/homepage";
+import { RootLayout } from "../layout/root-layout";
+import { Landing } from "../pages/landing";
+import { AboutUs } from "../pages/about";
+import { SignUp } from "../pages/auth/sign-up";
+import { SignIn } from "../pages/auth/sign-in";
+import { Error404 } from "../pages/error";
+import { Pricing } from "../pages/pricing";
+import { Checkout } from "../pages/checkout";
+import { PurchaseComplete } from "../pages/checkout/purcharse-complete";
+import { CourseConference } from "../pages/course";
+import { FAQPage } from "../pages/faq";
+import { CourseProvider } from "../context";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -33,7 +33,7 @@ const router = createBrowserRouter(
             element={<PurchaseComplete />}
           />
         </Route>
-        <Route path="/course" element={<CourseConference />} />
+        <Route path="/course/:id" element={<CourseConference />} />
         <Route path="/faq" element={<FAQPage />} />
       </Route>
 
@@ -50,7 +50,7 @@ function App() {
     <CourseProvider>
       <RouterProvider
         router={router}
-        fallbackElement={"Something is wrong..."}
+        fallbackElement={<Error404 />}
       />
     </CourseProvider>
   );

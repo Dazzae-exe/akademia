@@ -16,7 +16,7 @@ export const Pricing = () => {
         Obten beneficios extras para tus proximos cursos.
       </h1>
       
-      <Card className="w-full max-w-4xl bg-white">
+      <Card className="w-full max-w-4xl">
         <CardHeader>
           <CardTitle className="text-3xl font-bold">Premium</CardTitle>
           <CardDescription>
@@ -39,8 +39,8 @@ export const Pricing = () => {
 
           <div className="mt-8">
             <h3 className="text-lg font-semibold mb-4">Beneficios</h3>
-            <FeatureItem>Preguntas extras mensuales.</FeatureItem>
-            <FeatureItem>Acceso a charlas privadas de los instructores antes o despues del curso.</FeatureItem>
+            <FeatureItem>Coins mensuales para hacer preguntas en vivo.</FeatureItem>
+            <FeatureItem>Acceso a charlas y cursos totalmente gratuitos para los suscritos.</FeatureItem>
             <FeatureItem>Acceso a todos los avatares de la plataforma.</FeatureItem>
             <FeatureItem>Contacto directo con el instructor para resolver dudas personales.</FeatureItem>
             <FeatureItem>
